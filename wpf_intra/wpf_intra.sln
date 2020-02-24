@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "intra_models", "intra_models\intra_models.csproj", "{B4669964-45E8-4D9D-8831-26786105EA80}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gestionnaire_Clients", "Gestionnaire_Clients\Gestionnaire_Clients.csproj", "{39660CE1-7BE4-4653-BA38-941DDB1762E3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B4669964-45E8-4D9D-8831-26786105EA80} = {B4669964-45E8-4D9D-8831-26786105EA80}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

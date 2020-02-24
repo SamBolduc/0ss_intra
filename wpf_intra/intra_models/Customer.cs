@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace intra_models
 {
@@ -14,8 +15,22 @@ namespace intra_models
         public string ContactInfo { get; set; }
         public string PicturePath { get; set; }
 
+        private string _info;
+
+        public string Info {
+            get => LastName + ", " + Name;
+            private set
+            {
+                this._info = value;
+            }
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public string Info() => "";
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
     }
 }
