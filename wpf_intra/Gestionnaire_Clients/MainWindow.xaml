@@ -6,7 +6,100 @@
         xmlns:local="clr-namespace:Gestionnaire_Clients"
         mc:Ignorable="d"
         Title="Gestion de clients" Height="450" Width="800">
-    <Grid>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_Fichier"/>
+            <MenuItem Header="_Edition"/>
+            <MenuItem Header="_Affichage"/>
+        </Menu>
+        <StatusBar DockPanel.Dock="Bottom">
+            <TextBlock Text="Client selectionner: "/>
+        </StatusBar>
 
-    </Grid>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Vertical">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0"  Content="Liste des clients"/>
+                    <Button Grid.Row="0" Grid.Column="1"  Content="Nouveau client"/>
+                </Grid>
+                <ListView Height="368" Width="268">
+                    <ListViewItem Content="ijfwafjiwaji"></ListViewItem>
+                    <ListViewItem Content="ijfwafjiwaji"></ListViewItem>
+                    <ListViewItem Content="ijfwafjiwaji"></ListViewItem>
+                    <ListViewItem Content="ijfwafjiwaji"></ListViewItem>
+                    <ListViewItem Content="ijfwafjiwaji"></ListViewItem>
+                    <ListViewItem Content="ijfwafjiwaji"></ListViewItem>
+                    <ListViewItem Content="ijfwafjiwaji"></ListViewItem>
+                    <ListViewItem Content="ijfwafjiwaji"></ListViewItem>
+                    <ListViewItem Content="ijfwafjiwaji"></ListViewItem>
+                    <ListViewItem Content="ijfwafjiwaji"></ListViewItem>
+                    <ListViewItem Content="ijfwafjiwaji"></ListViewItem>
+                    <ListViewItem Content="ijfwafjiwaji"></ListViewItem>
+                    <ListViewItem Content="ijfwafjiwaji"></ListViewItem>
+                    <ListViewItem Content="ijfwafjiwaji"></ListViewItem>
+                    <ListViewItem Content="ijfwafjiwaji"></ListViewItem>
+                    <ListViewItem Content="ijfwafjiwaji"></ListViewItem>
+                    <ListViewItem Content="ijfwafjiwaji"></ListViewItem>
+                    <ListViewItem Content="ijfwafjiwaji"></ListViewItem>
+                    <ListViewItem Content="ijfwafjiwaji"></ListViewItem>
+                    <ListViewItem Content="ijfwafjiwaji"></ListViewItem>
+                    <ListViewItem Content="ijfwafjiwaji"></ListViewItem>
+                    <ListViewItem Content="ijfwafjiwaji"></ListViewItem>
+                    <ListViewItem Content="ijfwafjiwaji"></ListViewItem>
+                    <ListViewItem Content="ijfwafjiwaji"></ListViewItem>
+                    <ListViewItem Content="ijfwafjiwaji"></ListViewItem>
+                    <ListViewItem Content="ijfwafjiwaji"></ListViewItem>
+                    <ListViewItem Content="ijfwafjiwaji"></ListViewItem>
+                    <ListViewItem Content="ijfwafjiwaji"></ListViewItem>
+                    <ListViewItem Content="ijfwafjiwaji"></ListViewItem>
+                </ListView>
+            </StackPanel>
+            <Grid Height="336" Width="490">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="27*"/>
+                    <RowDefinition Height="22*"/>
+                    <RowDefinition Height="24*"/>
+                    <RowDefinition Height="28*"/>
+                    <RowDefinition Height="27*"/>
+                    <RowDefinition Height="208*"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Column="0" VerticalAlignment="Center" Content="Prenom:" Height="26" Margin="0,0,1,0"/>
+                <Label Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Content="Adresse:" Height="26" Margin="0,0,1,0"/>
+                <Label Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Content="Ville:" Height="26" Margin="0,0,1,0"/>
+                <Label Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" Content="Code Postal:" Height="26" Margin="0,0,1,0"/>
+                <Label Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" Content="Contact:" Height="26" Margin="0,0,1,0"/>
+
+                <TextBox Grid.Column="1" Grid.ColumnSpan="3" VerticalAlignment="Center" Text="fwaokgwiaj" Height="18" Margin="0,0,81,0"/>
+                <TextBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" VerticalAlignment="Center" Text="fwaokgwiaj" Height="18"/>
+                <TextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4" VerticalAlignment="Center" Text="fwaokgwiaj" Height="18" Margin="0,0,81,0"/>
+                <TextBox Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" VerticalAlignment="Center" Text="fwaokgwiaj" Height="18" Margin="0,0,81,0"/>
+                <TextBox Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="4" VerticalAlignment="Center" Text="fwaokgwiaj" Height="18"/>
+
+                <Label Grid.Column="4" VerticalAlignment="Center" Content="Nom:" Height="26"/>
+                <Label Grid.Row="2" Grid.Column="4" VerticalAlignment="Center" Content="Province:" Height="26"/>
+
+                <TextBox Grid.Column="5" Grid.ColumnSpan="2" VerticalAlignment="Center" Text="fwaokgwiaj" Height="18" Margin="1,0,0,0"/>
+                <TextBox Grid.Row="2" Grid.Column="5" VerticalAlignment="Center" Text="fwaokgwiaj" Height="18"/>
+                <Button Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="3" Height="25" Content="Supprimer client" VerticalAlignment="Top"/>
+            </Grid>
+
+
+        </StackPanel>
+
+    </DockPanel>
 </Window>
