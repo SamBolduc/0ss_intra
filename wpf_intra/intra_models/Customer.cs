@@ -3,7 +3,7 @@ using System.ComponentModel;
 
 namespace intra_models
 {
-    public class Class1 : INotifyPropertyChanged
+    public class Customer : INotifyPropertyChanged
     {
         public string Name { get; set; }
         public string LastName { get; set; }
@@ -15,5 +15,7 @@ namespace intra_models
         public string PicturePath { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
+
+        public string Info() => "";
     }
 }
