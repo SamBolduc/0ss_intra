@@ -10,12 +10,25 @@
         Title="Gestion de clients" Height="450" Width="800">
     <DockPanel>
         <Menu DockPanel.Dock="Top">
-            <MenuItem Header="_Fichier"/>
+            <MenuItem Header="_Fichier">
+                <MenuItem Header="_Ouvrir..."/>
+                <MenuItem Header="_Sauvegarder"/>
+                <MenuItem Header="_Fermer"/>
+                <MenuItem Header="_Nouveau client" Click="newClient"/>
+                <MenuItem Header="_Quitter"/>
+            </MenuItem>
             <MenuItem Header="_Edition"/>
             <MenuItem Header="_Affichage"/>
         </Menu>
         <StatusBar DockPanel.Dock="Bottom">
-            <TextBlock Text="Client selectionner: "/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="Client selectionner: "/>
+                <TextBlock Grid.Column="1" Text="{Binding CurrentCustomer.Info}"/>
+            </Grid>
         </StatusBar>
 
         <StackPanel Orientation="Horizontal">
@@ -27,9 +40,9 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <Label Grid.Row="0" Grid.Column="0"  Content="Liste des clients"/>
-                    <Button Grid.Row="0" Grid.Column="1"  Content="Nouveau client"/>
+                    <Button Grid.Row="0" Grid.Column="1"  Content="Nouveau client" Click="newClient"/>
                 </Grid>
-                <ListView x:Name="listView" Height="358" Width="268" ItemsSource="{Binding Customers}" SelectionChanged="onChange">
+                <ListView x:Name="listView" Height="341" Width="268" ItemsSource="{Binding Customers}" SelectionChanged="onChange">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding Info}" />

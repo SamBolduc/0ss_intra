@@ -52,7 +52,7 @@ namespace Gestionnaire_Clients
                 new Customer() {Name="Christopher", LastName="Monroe",Address="8142 Fusce St.", City="Baie-Comeau",Province="QC", PostalCode="G2B 9R9", PicturePath="images/user.png", ContactInfo="Work : 827-654-9939"}
             };
 
-            this.currentCustomer = Customers[0];
+            this.CurrentCustomer = Customers[0];
 
             InitializeComponent();
         }
@@ -67,6 +67,14 @@ namespace Gestionnaire_Clients
         private void onChange(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
             this.CurrentCustomer = e.AddedItems[0] as Customer;
+        }
+
+        private void newClient(object sender, RoutedEventArgs e)
+        {
+            Customer customer;
+            this.Customers.Add(customer = new Customer(){ Name = "Undefined", LastName = "Undefined", Address = "Undefined", City = "Undefined", Province = "Undefined", PostalCode = "Undefined", PicturePath = "images/user.png", ContactInfo = "Undefined" });
+            this.CurrentCustomer = customer;
+            this.listView.SelectedItem = this.CurrentCustomer;
         }
     }
 }
