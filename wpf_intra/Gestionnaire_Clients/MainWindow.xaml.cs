@@ -66,6 +66,8 @@ namespace Gestionnaire_Clients
 
         private void onChange(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
+            if (e.AddedItems.Count <= 0) return;
+
             this.CurrentCustomer = e.AddedItems[0] as Customer;
         }
 
@@ -75,6 +77,15 @@ namespace Gestionnaire_Clients
             this.Customers.Add(customer = new Customer(){ Name = "Undefined", LastName = "Undefined", Address = "Undefined", City = "Undefined", Province = "Undefined", PostalCode = "Undefined", PicturePath = "images/user.png", ContactInfo = "Undefined" });
             this.CurrentCustomer = customer;
             this.listView.SelectedItem = this.CurrentCustomer;
+        }
+
+        private void DeleteCustomer(object sender, RoutedEventArgs e)
+        {
+            if (Customers.Count == 0) return;
+
+            var currentIndex = this.Customers.IndexOf(this.CurrentCustomer);
+            this.Customers.Remove(this.CurrentCustomer);
+            this.CurrentCustomer = currentIndex >= 1 ? this.Customers[currentIndex - 1] : null;
         }
     }
 }

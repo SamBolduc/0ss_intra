@@ -89,7 +89,7 @@
 
                 <TextBox Grid.Column="5" Grid.ColumnSpan="2" VerticalAlignment="Center" Text="{Binding Path=CurrentCustomer.LastName}" Height="18" Margin="1,0,0,0"/>
                 <TextBox Grid.Row="2" Grid.Column="5" VerticalAlignment="Center" Text="{Binding Path=CurrentCustomer.Province}" Height="18"/>
-                <Button Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="3" Height="24" Content="Supprimer client" VerticalAlignment="Center" />
+                <Button Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="3" Height="24" Content="Supprimer client" VerticalAlignment="Center" Click="DeleteCustomer" />
 
                 <Image Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="4" Source="{Binding Path=CurrentCustomer.PicturePath}"/>
 
